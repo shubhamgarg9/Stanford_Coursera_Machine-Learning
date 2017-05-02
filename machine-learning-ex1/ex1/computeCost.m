@@ -12,9 +12,14 @@ function J = computeCost(X, y, theta)
 % ====================== YOUR CODE HERE ======================
 % Instructions: Compute the cost of a particular choice of theta
 %               You should set J to the cost.
-
-
-
+  theta0 = theta(1)
+  theta1 = theta(2)
+  temp = 0
+  for i=1:m,
+    temp = temp + (theta0 + theta1*X(i,2) - y(i))^2
+  end
+  J = (0.5/m)*(temp)
+    
 
 
 % =========================================================================
